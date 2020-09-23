@@ -1,0 +1,35 @@
+<div class="containerAll">
+    <div class="infosCollegue">
+        <div class="containerPhoto">
+            <img src="assets/img/telechargement.png" alt="photo collègue">
+        </div>
+        <div class="labelsInfos">
+            <div class="containerLabels">
+                <p>Matricule :</p>
+                <div class="separator"></div>
+                <p>Nom :</p>
+                <div class="separator"></div>
+                <p>Prenom(s) :</p>
+                <div class="separator"></div>
+                <p>Date de naissance :</p>
+                <div class="separator"></div>
+                <p>Adresse mail :</p>
+            </div>
+            <div class="containerInfos">
+                <p>{{col.matricule}}</p>
+                <div class="separator"></div>
+                <p>{{col.nom}}</p>
+                <div class="separator"></div>
+                <p>{{col.prenoms}}</p>
+                <div class="separator"></div>
+                <p>{{col.dateDeNaissance | date:'dd/MM/yyyy'}}</p>
+                <div class="separator"></div>
+                <p>{{col.email}}</p>
+            </div>
+        </div>
+        <button (click)="modifierConsole()" type="button" class="btn btn-dark mx-auto px-2 py-1">Modifier</button>
+    </div>
+    <div class="newCollegue">
+        <p (click)="creerCollegueConsole()"><span></span>Créer un nouveau collègue</p>
+    </div>
+</div>
