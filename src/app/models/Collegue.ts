@@ -20,9 +20,6 @@ class Collegue {
         this.photoUrl = photoUrl
     }
 
-    formatDate() {
-        return this.dateDeNaissance.toDateString
-    }
 }
 
 export { Collegue }

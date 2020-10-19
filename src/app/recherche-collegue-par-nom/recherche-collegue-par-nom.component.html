@@ -1,0 +1,22 @@
+<div class="containerAll col-10 col-md-3">
+    <div class="containerRecherche">
+        <div class="labelRecherche">
+            <p>Nom:</p>
+        </div>
+        <div class="inputRecherche">
+            <input #recherche type="text" placeholder="Nom à chercher">
+        </div>
+        <div class="btnRecherche text-right">
+            <button (click)="lancerRecherche(recherche.value)" type="button" class="btn btn-light mx-auto px-2 py-1 pull-right"><img src="../../assets/img/loupe.png" alt="Icone loupe"></button>
+        </div>
+    </div>
+    <div *ngIf="matTab">
+        <div *ngFor="let mat of matTab" class="containerResultRecherche">
+            <div (click)="afficherInfos(mat)" class="resultRecherche">
+                <p>{{mat}}</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="matNotFound" class="alert alert-warning text-center py-2">Nom introuvable</div>
+    <div *ngIf="errorTech" class="alert alert-danger text-center py-2">Ouch Aie Oops !</div>
+</div>

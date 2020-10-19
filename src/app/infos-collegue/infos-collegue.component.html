@@ -1,0 +1,36 @@
+<div class="containerAll">
+    <div class="rowImg">
+        <div class="contImg">
+            <img src="../../assets/{{colCourant.photoUrl}}" alt="Photo du collègue courant">
+        </div>
+    </div>
+    <div class="contAttr">
+        <div class="rowAttr">
+            <p>Matricule:</p>
+            <div>{{colCourant.matricule}}</div>
+        </div>
+        <div class="rowAttr">
+            <p>Nom:</p>
+            <div>{{colCourant.nom}}</div>
+        </div>
+        <div class="rowAttr">
+            <p>Prénom:</p>
+            <div>{{colCourant.prenoms}}</div>
+        </div>
+        <div class="rowAttr">
+            <p>Date de naissance:</p>
+            <div>{{colCourant.dateDeNaissance | date:'dd MMMM yyyy'}}</div>
+        </div>
+        <div class="rowAttr">
+            <p>Email:</p>
+            <div>{{colCourant.email}}</div>
+        </div>
+    </div>
+    <div class="upDel">
+        <img src="../../assets/img/crayon.png" alt="Icone crayon">
+        <img src="../../assets/img/poubelle.png" alt="Icone poubelle">
+    </div>
+</div>
+<div class="back">
+    <a routerLink='/galerie'><img src="../../assets/img/back.png" alt="Icone de retour"></a>
+</div>

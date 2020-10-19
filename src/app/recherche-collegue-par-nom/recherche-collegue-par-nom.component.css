@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.containerAll {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.30);
+}
+
+.containerRecherche {
+    display: flex;
+    background-color: #4bc190;
+    align-items: center;
+}
+
+.labelRecherche, .inputRecherche, .btnRecherche {
+    margin: 15px;
+}
+
+.labelRecherche {
+    margin-right: 0;
+}
+
+.labelRecherche p {
+    letter-spacing: 2px;
+    color: white;
+}
+
+.inputRecherche input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.inputRecherche input:focus {
+    outline: none;
+}
+
+.btnRecherche{
+    width: 100%;
+}
+
+.nomMat, .resultRecherche {
+    display: flex;  
+}
+
+.nomMat p {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.resultRecherche p {
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.resultRecherche p:hover {
+    background-color: lightgrey;
+}
+
+.nomMat p, .resultRecherche p {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+}
+
+.btn {
+    
+}
+
+.btn img {
+    filter: contrast(0);
+    width: 20px;
+    transition: 0.5s;
+}
+
+.btn:hover img {
+    filter: contrast(1);
+    transform: rotate(360deg);
+}

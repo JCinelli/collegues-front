@@ -1,0 +1,14 @@
+li a{
+    color: white !important;
+}
+
+.active a {
+    border-bottom: 4px solid #BFC2C7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #4bc190;
+}
+
+nav {
+    background-color: #28332E !important;
+}

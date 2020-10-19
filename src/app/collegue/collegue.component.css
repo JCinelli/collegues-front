@@ -4,8 +4,6 @@
 }
 
 .containerAll {
-    min-height: 100vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,19 +12,32 @@
 
 .infosCollegue {
     display: flex;
-    flex-wrap: wrap;
-    width: 50%;
     box-shadow: inset 0px 0px 13px 0px rgba(0,0,0,0.30);
     border-radius: 15px;
-    padding: 20px 0px;
+    padding: 20px 20px;
+    flex-direction: column;
+    width: 100%;
 }
 
 .labelsInfos {
     display: flex;
+    flex-direction: column;
 }
 
-.labelsInfos p{
-    padding: 10px 20px;
+.info {
+    width: 100%;
+    display: flex;
+}
+
+.info p {
+    width: 50%;
+    padding: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.divInput {
+    padding: 18px 20px;
 }
 
 .containerLabels, .containerPhoto, .containerInfos {
@@ -35,46 +46,18 @@
     justify-content: center;
 }
 
-.containerPhoto img{
-    width: 100%;
-    background-color: #fff;
-    padding: 20px;
-    z-index: -1;
+.containerPhoto {
+    display: flex;
+    align-items: center;
 }
+
+.containerPhoto img{
+    padding: 20px;
+    width: 212px;
+}
+
 .separator {
     width: 100%;
     height: 1px;
     background-color: darkgrey;
-}
-
-.newCollegue {
-    margin-top: 25px;
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    transition: 0.2s;
-    overflow: hidden;
-    padding-bottom: 10px;
-}
-
-.newCollegue p span {
-    position: absolute;
-    bottom: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #4bc190);
-}
-.newCollegue p {
-    transition: 0.4s;
-}
-
-.newCollegue p:hover {
-    letter-spacing: 0.5px;
-    color: #4bc190;
-}
-
-.newCollegue p:hover span {
-    left: 100%;
-    transition: 1s;
 }

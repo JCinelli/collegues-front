@@ -1,35 +1,48 @@
-<div class="containerAll">
+<div *ngIf="!col" class="alert alert-warning text-center py-2">Veuillez rechercher un Collegue</div>
+<div *ngIf="col" class="containerAll">
     <div class="infosCollegue">
         <div class="containerPhoto">
-            <img src="assets/img/telechargement.png" alt="photo collègue">
+            <img src="assets/{{col.photoUrl}}" alt="photo collègue">
         </div>
         <div class="labelsInfos">
-            <div class="containerLabels">
-                <p>Matricule :</p>
-                <div class="separator"></div>
-                <p>Nom :</p>
-                <div class="separator"></div>
-                <p>Prenom(s) :</p>
-                <div class="separator"></div>
-                <p>Date de naissance :</p>
-                <div class="separator"></div>
-                <p>Adresse mail :</p>
-            </div>
-            <div class="containerInfos">
+            <div class="info">
+                <p>Matricule:</p>
                 <p>{{col.matricule}}</p>
-                <div class="separator"></div>
-                <p>{{col.nom}}</p>
-                <div class="separator"></div>
+            </div>
+            <div class="separator"></div>
+            <div class="info">
+                <p>Nom:</p>
+                <p>{{col.nom | uppercase}}</p>
+            </div>
+            <div class="separator"></div>
+            <div class="info">
+                <p>Prenom(s):</p>
                 <p>{{col.prenoms}}</p>
-                <div class="separator"></div>
+            </div>
+            <div class="separator"></div>
+            <div class="info">
+                <p>Date de naissance:</p>
                 <p>{{col.dateDeNaissance | date:'dd/MM/yyyy'}}</p>
-                <div class="separator"></div>
-                <p>{{col.email}}</p>
+            </div>
+            <div class="separator"></div>
+            <div class="info">
+                <p>Adresse mail:</p>
+                <p *ngIf="modifier" title="{{col.email}}">{{col.email}}</p>
+                <div *ngIf="!modifier" class="divInput">
+                    <input type="text" placeholder="newEmail@mail.com">
+                </div>
+            </div>
+            <div *ngIf="!modifier" class="separator"></div>
+            <div class="info">
+                <p *ngIf="!modifier">Url photo :</p>
+                <div *ngIf="!modifier" class="divInput">
+                    <input type="text" placeholder="/url/exemple.png">
+                </div>
             </div>
         </div>
-        <button (click)="modifierConsole()" type="button" class="btn btn-dark mx-auto px-2 py-1">Modifier</button>
-    </div>
-    <div class="newCollegue">
-        <p (click)="creerCollegueConsole()"><span></span>Créer un nouveau collègue</p>
+        <button *ngIf="modifier" (click)="modifierConsole()" type="button"
+            class="btn btn-dark mx-auto px-2 py-1">Modifier</button>
+        <button *ngIf="!modifier" (click)="modifierConsole()" type="button"
+            class="btn btn-success mx-auto px-2 py-1">Valider</button>
     </div>
 </div>

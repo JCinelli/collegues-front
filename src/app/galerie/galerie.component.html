@@ -1,0 +1,20 @@
+<div class="titre">
+    <p class="align-middle">Galerie</p>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let colG of allCollegues" class="col-lg-2 col-md-3 col-sm-6 col-6">
+            <div class="bg-dark contImg">
+                <a routerLink="/galerie/{{colG.matricule}}">
+                    <img src="../../assets/{{colG.photoUrl}}" alt="{{colG.matricule}}" class="w-100">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="contNewCol">
+    <div class="newCollegue">
+        <p routerLink='/newCollegue'><span></span>Créer un nouveau collègue</p>
+    </div>
+</div>
+<div class="blanc"></div>
